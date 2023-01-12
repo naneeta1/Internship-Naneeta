@@ -12,9 +12,10 @@ body{
     overflow-x: hidden;
 }
 
-a{
+li a{
     text-decoration: none;
     color:#eee;
+    font-weight: 400;
 }
 
 header{
@@ -39,11 +40,12 @@ nav{
     font-size: 1.6rem;
 }
 
-.brand{
-    font-size: 3rem;
+.brand a{
+    font-size: 3rem ;
     font-weight: 300;
     transform: translateX(-100rem);
     animation: slideIn .5s forwards;
+    
 }
 
 .brand span{
