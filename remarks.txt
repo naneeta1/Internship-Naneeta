@@ -5,7 +5,9 @@ Need to improve
 - Color scheme
 - Animation
 
-Give atleast 2 hours a day to your css to make it more polish. Good things take time. You don't need to code anything from scratch. Just know how to use something on google and how to change it.
+Give atleast 2 hours a day to your css to make it more polish. 
+Good things take time. You don't need to code anything from scratch.
+Just know how to use something on google and how to change it.
 
 Best resources
 - Youtube
