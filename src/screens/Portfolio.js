@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet,Image } from 'react-native'
 import React from 'react';
 import Header from '../common/Header';
 import { useNavigation } from '@react-navigation/native';
@@ -7,12 +7,13 @@ import PortfolioTabs from './PortfolioTabs';
 
 import SearchBar from '../common/SearchBar';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 const Portfolio = () => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+       <View style={styles.container}>
       <Header 
       leftIcon={require('../images/menu.png')} 
       rightIcon={require('../images/bell.png')} 
@@ -22,11 +23,12 @@ const Portfolio = () => {
       }} />
  
       <SearchBar />
-     {/*<View style={styles.content}>
+      <View style={styles.content}>
         <PortfolioTabs />
-      </View>*/}
-     
       </View>
+      {/**/}
+      </View>
+     
       
   )
 }
@@ -35,15 +37,22 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
   },
-  searchBarAndTabs: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-  },
   content: {
     flex: 1,
+  },
+  img:{
+    height:25,
+    width:25,
+    marginHorizontal:5,
+  },
+  social:{
+    display:'flex',
+    flexDirection:'row',
+    fontSize:20,
+    marginVertical:5
+  },
+  socialText:{
+    fontSize:15,
   }
 })
 

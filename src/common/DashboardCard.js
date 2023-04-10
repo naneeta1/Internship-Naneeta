@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image } from 'react-native';
 
-const DashboardCard = ({title,imageSource, eths, price, percent,iconSource}) => {
+const DashboardCard = ({title,imageSource, eths, price, percent}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
@@ -16,13 +16,6 @@ const DashboardCard = ({title,imageSource, eths, price, percent,iconSource}) => 
       <View style={styles.info}>
         <Text style={styles.price}>{price}</Text>
         <View style={styles.changeContainer}>
-          <View style={styles.icon}>
-            <Image
-              source={iconSource}
-              style={styles.arrow}
-              resizeMode="contain"
-            />
-          </View>
           <Text style={styles.change}>{percent}</Text>
         </View>
       </View>
@@ -43,9 +36,13 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0 },
     elevation: 2,
     marginTop:20,
+    marginHorizontal:10,
+    alignSelf:'center',
+    width:250,
+    height:250,
   },
   title: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: '600',
     letterSpacing: 0.5,
     color: '#374151',
@@ -65,12 +62,14 @@ const styles = StyleSheet.create({
   image: {
     height: 60,
     width: 60,
+    marginVertical:10
   },
   amount: {
     fontSize: 24,
     fontWeight: '700',
     color: '#374151',
     marginBottom: 8,
+    marginTop:20,
   },
   info: {
     flexDirection: 'row',

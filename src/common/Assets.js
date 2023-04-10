@@ -1,25 +1,30 @@
 import React from 'react';
 import { View, Image, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-const Card = () => {
+const Assets = ({imageSource, title, hotel, amount}) => {
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    // Navigate to the hotel details screen
+    navigation.navigate('HotelDetails');
+  };
+
   return (
-    <TouchableOpacity style={styles.cardContainer}>
+    <TouchableOpacity style={styles.cardContainer} onPress={handlePress}>
       <View style={styles.imageContainer}>
         <Image
-          source={{
-            uri:
-              'https://example.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F1.89e0c65d.jpg&w=3840&q=100',
-          }}
+          source={imageSource}
           style={styles.image}
         />
         <View style={styles.overlay}>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>Dubai</Text>
+            <Text style={styles.title}>{title}</Text>
           </View>
           <View style={styles.contentContainer}>
-            <Text style={styles.contentTitle}>Redison hotel</Text>
+            <Text style={styles.contentTitle}>{hotel}</Text>
             <Text style={styles.contentSubtitle}>
-              Purchase Amount: $ 10,00,100
+              Purchase Amount: $ {amount}
             </Text>
           </View>
         </View>
@@ -34,7 +39,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderRadius: 10,
     transform: [{ translateY: 0 }],
-    marginBottom: 20,
+    marginVertical:15,
+    
   },
   imageContainer: {
     position: 'relative',
@@ -96,4 +102,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Card;
+export default Assets;

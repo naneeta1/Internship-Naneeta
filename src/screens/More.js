@@ -7,8 +7,9 @@ import Bookings from '../common/Bookings';
 
 const More = () => {
   return (
-    <ScrollView>
+    
     <View>
+      <ScrollView>
       <View>
         <Image source={require('../images/nft1.png')} style={styles.img} />
         <Text style={styles.text}>TOTAL VALUE</Text>
@@ -28,9 +29,9 @@ const More = () => {
         <Text style={{color:'black',fontWeight:'bold'}}>ABOUT FORTIFY</Text>
         <Text style={{color:'gray'}}>Welcome to Forify Investments, your claim value will be open with respect to our assets value. It is not time bassed. THANK YOU</Text>
       </View>
-
+      </ScrollView>
     </View>
-    </ScrollView>
+   
   )
 }
 

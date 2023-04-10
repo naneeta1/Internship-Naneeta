@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   },
   nftCount: { 
     overflow: 'hidden',
-    textOverflow: 'ellipsis',
+    
     marginLeft: 2,
     marginRight: 2,
     letterSpacing: 1,

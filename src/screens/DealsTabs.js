@@ -5,7 +5,7 @@ import DashboardHistory from './DashboardHistory';
 import Booked from './Booked';
 import Upcoming from './Upcoming';
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import More from './More';
 
@@ -27,7 +27,7 @@ const DealsTabs = () => {
         options={{
           tabBarLabel: 'Available',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="albums-outline" size={size} color={color} />
+            <Image style={{height:30,width:30}} source={require('../images/available.png')}/>
           ),
         }}
       />
@@ -37,7 +37,7 @@ const DealsTabs = () => {
         options={{
           tabBarLabel: 'Booked',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time-outline" size={size} color={color} />
+            <Image style={{height:30,width:30}} source={require('../images/booked.png')}/>
           ),
         }}
       />
@@ -47,7 +47,7 @@ const DealsTabs = () => {
         options={{
           tabBarLabel: 'Upcoming',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time-outline" size={size} color={color} />
+            <Image style={{height:30,width:30}} source={require('../images/upcoming.png')}/>
           ),
           headerShown:false,
         }}
@@ -58,7 +58,7 @@ const DealsTabs = () => {
         options={{
           tabBarLabel: 'My History',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="time-outline" size={size} color={color} />
+            <Image style={{height:30,width:30}} source={require('../images/history.png')}/>
           ),
           headerShown:false,
         }}
@@ -74,13 +74,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginBottom: 6,
     paddingBottom:10,
-    elevation: 0,
+    elevation: 0,paddingVertical:10,
     
   },
   label: {
     fontSize: 18,
     alignSelf:'center',
-    marginBottom:10
+    
   },
 });
 

@@ -3,8 +3,6 @@ import React from 'react';
 import Header from '../common/Header';
 import { useNavigation } from '@react-navigation/native';
 import DealsTabs from './DealsTabs';
-import PortfolioTabs from './PortfolioTabs';
-
 import SearchBar from '../common/SearchBar';
 
 
@@ -34,13 +32,6 @@ const Deals = () => {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-  },
-  searchBarAndTabs: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
   },
   content: {
     flex: 1,
