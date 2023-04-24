@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor:'black',
     alignItems: 'center',
   },
   bookingTitle: {
